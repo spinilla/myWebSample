@@ -1,0 +1,66 @@
+0012644@PC09RNCD MINGW64 /c/GitEjercicios
+$ mkdir GitCloneRepo
+
+0012644@PC09RNCD MINGW64 /c/GitEjercicios
+$ cd GitCloneRepo/
+
+0012644@PC09RNCD MINGW64 /c/GitEjercicios/GitCloneRepo
+$ git clone https://github.com/comunidad-gitvn/websample.git
+Cloning into 'websample'...
+remote: Counting objects: 115, done.
+remote: Compressing objects: 100% (88/88), done.
+remote: Total 115 (delta 39), reused 99 (delta 27), pack-reused 0
+Receiving objects: 100% (115/115), 12.94 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (39/39), done.
+
+0012644@PC09RNCD MINGW64 /c/GitEjercicios/GitCloneRepo
+$ cd websample/
+
+0012644@PC09RNCD MINGW64 /c/GitEjercicios/GitCloneRepo/websample (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+0012644@PC09RNCD MINGW64 /c/GitEjercicios/GitCloneRepo/websample (master)
+$ git add .
+
+0012644@PC09RNCD MINGW64 /c/GitEjercicios/GitCloneRepo/websample (master)
+$ git commit -m "Inital Commit - Edited Title Home"
+[master ed0e8fc] Inital Commit - Edited Title Home
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+0012644@PC09RNCD MINGW64 /c/GitEjercicios/GitCloneRepo/websample (master)
+$ git remote add origin https://github.com/spinilla/myWebSample.git
+fatal: remote origin already exists.
+
+0012644@PC09RNCD MINGW64 /c/GitEjercicios/GitCloneRepo/websample (master)
+$ git remote -v
+origin  https://github.com/comunidad-gitvn/websample.git (fetch)
+origin  https://github.com/comunidad-gitvn/websample.git (push)
+
+0012644@PC09RNCD MINGW64 /c/GitEjercicios/GitCloneRepo/websample (master)
+$ git remote remove origin
+
+0012644@PC09RNCD MINGW64 /c/GitEjercicios/GitCloneRepo/websample (master)
+$ git remote add origin https://github.com/spinilla/myWebSample.git
+
+0012644@PC09RNCD MINGW64 /c/GitEjercicios/GitCloneRepo/websample (master)
+$ git push origin master
+Counting objects: 115, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (76/76), done.
+Writing objects: 100% (115/115), 12.93 KiB | 0 bytes/s, done.
+Total 115 (delta 40), reused 112 (delta 39)
+remote: Resolving deltas: 100% (40/40), done.
+To https://github.com/spinilla/myWebSample.git
+ * [new branch]      master -> master
+
+0012644@PC09RNCD MINGW64 /c/GitEjercicios/GitCloneRepo/websample (master)
+$
